@@ -19,7 +19,7 @@ let package = Package(
     ],
     dependencies: [
         .package(
-            url: "https://github.com/swift-molecules/swift-path.git",
+            url: "https://github.com/swift-atoms/swift-path.git",
             branch: "main"
         ),
         .package(
@@ -46,7 +46,11 @@ let package = Package(
         ),
         .testTarget(
             name: "Path Error Tests",
-            dependencies: ["Path Error"]
+            dependencies: [
+                "Path Error",
+                .product(name: "Path", package: "swift-path"),
+                .product(name: "Error", package: "swift-error"),
+            ]
         ),
     ],
     swiftLanguageModes: [.v6]

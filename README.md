@@ -1,3 +1,4 @@
 # swift-path-error
 
-Error integration for the Path domain.
+Owns Path × Error integration: canonicalization failures that distinguish
+Path resolution failures from platform errors while preserving both values.

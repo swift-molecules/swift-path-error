@@ -3,13 +3,15 @@
     public import Path
     public import Error
 
+    public typealias PathPlatformError = Error
+
     extension Path.Canonical {
 
         public enum Error: Swift.Error, Sendable {
 
             case path(Path.Resolution.Error)
 
-            case platform(Error.Error)
+            case platform(PathPlatformError)
         }
     }
 
